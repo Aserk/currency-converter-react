@@ -1,7 +1,11 @@
+import Container from "./Container";
+import Form from "./Form";
 
 function App() {
   return (
-    <div></div>
+    <Container>
+      <Form />
+    </Container>
   );
 }
 

@@ -1,0 +1,9 @@
+.container {
+    max-width: 900px;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    color: white;
+    display: grid;
+    align-content: center;
+}
