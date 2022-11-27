@@ -12,6 +12,7 @@ const Form = () => {
   const calculateResult = () => {
     setResult({
       currency,
+      sourceAmount: +amount,
       targetAmount: amount / findCurrency().rate,
       rate: findCurrency().rate,
     });
