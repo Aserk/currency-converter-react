@@ -64,9 +64,7 @@ const Form = () => {
             </select>
           </label>
         </p>
-        <p>
-          <button className="form__button">Przelicz</button>
-        </p>
+        <button className="form__button">Przelicz</button>
         <Result result={result} />
       </fieldset>
     </form>
