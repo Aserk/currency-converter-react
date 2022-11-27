@@ -4,10 +4,13 @@ import "./style.css"
 const CurrentDate = () => {
     const [date, setDate] = useState(new Date());
 
-    const formattedDate = date.toLocaleDateString("pl", {
+    const formattedDate = date.toLocaleString("pl", {
         weekday: "long",
         day: "numeric",
         month: "long",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
     });
 
     useEffect(() => {
@@ -22,7 +25,7 @@ const CurrentDate = () => {
 
     return (
         <span className="date">
-            {`Dzisiaj jest ${formattedDate} ${date.toLocaleTimeString()}`}
+            {`Dzisiaj jest ${formattedDate}`}
         </span>
     )
 };
