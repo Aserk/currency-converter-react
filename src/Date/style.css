@@ -1,7 +1,5 @@
 .date {
-    text-align: right;
     font-family: monospace;
-    padding: 20px;
-    padding-bottom: 0;
-    background-color: hsla(156, 7%, 15%, 0.9);
+    justify-self: flex-end;
+    text-align: right;
 }

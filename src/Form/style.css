@@ -1,8 +1,7 @@
 .form {
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: hsla(156, 7%, 15%, 0.9);
 }
 
 .form__labelText {
