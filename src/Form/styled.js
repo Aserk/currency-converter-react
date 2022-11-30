@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledFieldset = styled.fieldset`
-    border: 2px solid hsl(145, 70%, 33%);;
+    border: 2px solid ${({ theme }) => theme.color.jewel};
     padding: 20px;
     border-radius: 8px;
 `;
@@ -17,7 +17,7 @@ export const StyledLegend = styled.legend`
     max-width: 360px;
     padding: 10px;
     border-radius: 8px;
-    background-color: hsl(145, 70%, 33%);
+    background-color: ${({ theme }) => theme.color.jewel};
 `;
 
 export const StyledButton = styled.button`
@@ -26,15 +26,15 @@ export const StyledButton = styled.button`
     border-radius: 8px;
     border: none;
     padding: 10px;
-    background-color: hsl(145, 70%, 33%);;
+    background-color: ${({ theme }) => theme.color.jewel};
     color: white;
 
     &:hover {
-        background-color: hsl(145, 70%, 28%);
+        filter: brightness(110%);
     }
 
     &:active {
-        background-color: hsl(145, 70%, 23%);
+        filter: brightness(115%);
     }
 `;
 
