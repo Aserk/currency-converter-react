@@ -13,6 +13,7 @@ This is simple currency converter build in React.
 To create the page I used:
 1. HTML
 2. CSS
+3. Styled Components
 3. JavaScript
 4. React
 
