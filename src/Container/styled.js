@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
     flex-basis: 800px;
     padding: 20px;
     margin: auto 20px;

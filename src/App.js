@@ -1,4 +1,4 @@
-import Container from "./Container";
+import { Container } from "./Container/styled";
 import CurrentDate from "./Date";
 import Form from "./Form";
 
