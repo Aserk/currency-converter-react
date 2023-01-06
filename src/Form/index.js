@@ -1,4 +1,4 @@
-import { StyledForm, StyledFieldset, StyledLegend, StyledButton, StyledField, StyledFieldText } from "./styled";
+import { StyledForm, Fieldset, Legend, Button, Field, FieldText } from "./styled";
 import { currencies } from "../Currencies"
 import { useState } from "react";
 import { Result } from "./Result";
@@ -25,14 +25,14 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      <StyledFieldset>
-        <StyledLegend>Kalkulator walut</StyledLegend>
+      <Fieldset>
+        <Legend>Kalkulator walut</Legend>
         <p>
           <label>
-            <StyledFieldText>
+            <FieldText>
               Kwota PLN*:
-            </StyledFieldText>
-            <StyledField
+            </FieldText>
+            <Field
               type="number"
               min="0"
               step={0.01}
@@ -44,10 +44,10 @@ const Form = () => {
         </p>
         <p>
           <label>
-            <StyledFieldText>
+            <FieldText>
               Waluta:
-            </StyledFieldText>
-            <StyledField as="select"
+            </FieldText>
+            <Field as="select"
               name="currency"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
@@ -60,12 +60,12 @@ const Form = () => {
                   {currency.name}
                 </option>
               ))};
-            </StyledField>
+            </Field>
           </label>
         </p>
-        <StyledButton>Przelicz</StyledButton>
+        <Button>Przelicz</Button>
         <Result result={result} />
-      </StyledFieldset>
+      </Fieldset>
     </StyledForm>
   )
 };

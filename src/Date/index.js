@@ -1,4 +1,4 @@
-import { StyledDate } from "./styled";
+import { Date } from "./styled";
 import { useCurrentDate } from "./useCurrentDate"
 
 const CurrentDate = () => {
@@ -15,9 +15,9 @@ const CurrentDate = () => {
     });
 
     return (
-        <StyledDate>
+        <Date>
             {`Dzisiaj jest ${formattedDate}`}
-        </StyledDate>
+        </Date>
     )
 };
 

@@ -6,13 +6,13 @@ export const StyledForm = styled.form`
     padding: 20px;
 `;
 
-export const StyledFieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
     border: 2px solid ${({ theme }) => theme.color.jewel};
     padding: 20px;
     border-radius: 8px;
 `;
 
-export const StyledLegend = styled.legend`
+export const Legend = styled.legend`
     width: 100%;
     max-width: 360px;
     padding: 10px;
@@ -20,7 +20,7 @@ export const StyledLegend = styled.legend`
     background-color: ${({ theme }) => theme.color.jewel};
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
     width: 100%;
     max-width: 360px;
     border-radius: 8px;
@@ -38,14 +38,14 @@ export const StyledButton = styled.button`
     }
 `;
 
-export const StyledField = styled.input`
+export const Field = styled.input`
     width: 100%;
     max-width: 200px;
     border-radius: 8px;
     padding: 8px;
 `;
 
-export const StyledFieldText = styled.span`
+export const FieldText = styled.span`
     width: 100%;
     max-width: 150px;
     display: inline-block;
