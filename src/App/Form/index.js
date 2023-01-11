@@ -9,17 +9,7 @@ const Form = () => {
   const { calculateResult, result } = useCalculateResult();
 
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("");
-
-  // const calculateResult = () => {
-  //   setResult({
-  //     currencyTo: currency,
-  //     currencyBase: "PLN",
-  //     sourceAmount: +amount,
-  //     targetAmount: amount,
-  //     rate: 1,
-  //   });
-  // };
+  const [currency, setCurrency] = useState("EUR");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
