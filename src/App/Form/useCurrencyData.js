@@ -9,7 +9,7 @@ export const useCurrencyData = () => {
     );
 
     useEffect(() => {
-        (async () => {
+        const getData = (async () => {
             try {
                 const response = await fetch("https://api.exchangerate.host/latest");
                 if (!response.ok) {
@@ -28,6 +28,8 @@ export const useCurrencyData = () => {
                 });
             }
         })();
+
+        // setTimeout(getData, 3000);
     }, []);
 
     return currencyData;

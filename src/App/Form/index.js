@@ -1,29 +1,29 @@
 import { StyledForm, Fieldset, Legend, Button, Field, FieldText } from "./styled";
-// import { currencies } from "../Currencies"
 import { useState } from "react";
 import { Result } from "./Result";
 import { useCurrencyData } from "./useCurrencyData";
+import { useCalculateResult } from "./useCalculateResult";
 
 const Form = () => {
+  const { date, currencies, status } = useCurrencyData();
+  const { calculateResult, result } = useCalculateResult();
+
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("");
-  const [result, setResult] = useState("");
 
-  const { date, currencies, status } = useCurrencyData();
-
-  // const findCurrency = () => currencies.find(({ short }) => short === currency);
   // const calculateResult = () => {
   //   setResult({
-  //     currency,
+  //     currencyTo: currency,
+  //     currencyBase: "PLN",
   //     sourceAmount: +amount,
-  //     targetAmount: amount / findCurrency().rate,
-  //     rate: findCurrency().rate,
+  //     targetAmount: amount,
+  //     rate: 1,
   //   });
   // };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    // calculateResult();
+    calculateResult("PLN", currency, amount);
   };
 
   return (
