@@ -9,11 +9,12 @@ const Form = () => {
   const { calculateResult, result } = useCalculateResult();
 
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("EUR");
+  const [currencyBase, setCurrencyBase] = useState("PLN");
+  const [currencyTarget, setCurrencyTarget] = useState("EUR");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult("PLN", currency, amount);
+    calculateResult(currencyBase, currencyTarget, amount);
   };
 
   return (
@@ -23,7 +24,28 @@ const Form = () => {
         <p>
           <label>
             <FieldText>
-              Kwota PLN*:
+              Mam:
+            </FieldText>
+            <Field as="select"
+              name="currencyBase"
+              value={currencyBase}
+              onChange={({ target }) => setCurrencyBase (target.value)}
+            >
+              {currencies.map((currency) => (
+                <option
+                  key={currency}
+                  value={currency}
+                >
+                  {currency}
+                </option>
+              ))};
+            </Field>
+          </label>
+        </p>
+        <p>
+          <label>
+            <FieldText>
+              Kwota {currencyBase}*:
             </FieldText>
             <Field
               type="number"
@@ -38,12 +60,12 @@ const Form = () => {
         <p>
           <label>
             <FieldText>
-              Waluta:
+              Chcę otrzymać:
             </FieldText>
             <Field as="select"
-              name="currency"
-              value={currency}
-              onChange={({ target }) => setCurrency(target.value)}
+              name="currencyTarget"
+              value={currencyTarget}
+              onChange={({ target }) => setCurrencyTarget (target.value)}
             >
               {currencies.map((currency) => (
                 <option
