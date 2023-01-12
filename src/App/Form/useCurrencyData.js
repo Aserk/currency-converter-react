@@ -18,18 +18,22 @@ export const useCurrencyData = () => {
                         throw new Error(response.statusText);
                     }
                     const { rates } = await response.json();
-                    setCurrencyData({
-                        currencies: Object.keys(rates),
-                        status: "success"
-                    });
+                    setCurrencyData(
+                        {
+                            currencies: Object.keys(rates),
+                            status: "success"
+                        }
+                    );
                 } catch (error) {
                     console.error("Something bad happened!", error);
-                    setCurrencyData({
-                        status: "error",
-                    });
+                    setCurrencyData(
+                        {
+                            status: "error",
+                        }
+                    );
                 }
             })();
-        }, 2000); 
+        }, 2000);
     }, []);
 
     return currencyData;
