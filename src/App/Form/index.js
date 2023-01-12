@@ -4,6 +4,8 @@ import { Result } from "./Result";
 import { Footer } from "./Footer";
 import { useCurrencyData } from "./useCurrencyData";
 import { useCalculateResult } from "./useCalculateResult";
+import { Loading } from "./Loading";
+import { Error } from "./Error";
 
 const Form = () => {
   const { date, currencies, status } = useCurrencyData();
@@ -20,8 +22,8 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      {status === "loading" ? <p>loading</p>
-        : status === "error" ? <p>error</p>
+      {status === "loading" ? <Loading />
+        : status === "error" ? <Error />
           : <>
             <Fieldset>
               <Legend>Kalkulator walut</Legend>
