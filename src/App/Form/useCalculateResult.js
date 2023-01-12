@@ -3,9 +3,9 @@ import { useState } from "react";
 export const useCalculateResult = () => {
     const [result, setResult] = useState("");
 
-    const calculateResult = (currencyBase, currencyTarget, sourceAmount) => {
-        const requestURL = "https://api.exchangerate.host/convert?from=" + currencyBase 
-                            + "&to=" + currencyTarget + "&amount=" + sourceAmount +"&places=2";
+    const calculateResult = (currencyBase, currencyTarget, sourceAmount, status, dateUpdate) => {
+        const requestURL = "https://api.exchangerate.host/convert?from=" + currencyBase
+            + "&to=" + currencyTarget + "&amount=" + sourceAmount + "&places=2";
 
         (async () => {
             try {
@@ -13,23 +13,18 @@ export const useCalculateResult = () => {
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
-                const { result } = await response.json();
+                const { result, date } = await response.json();
                 setResult({
                     currencyBase,
                     currencyTarget,
                     sourceAmount,
                     result,
                 });
-                // setCurrencyData({
-                //     date,
-                //     currencies: Object.keys(rates),
-                //     status: "success"
-                // });
+                status = "success";
+                dateUpdate = date;
             } catch (error) {
                 console.error("Something bad happened!", error);
-                // setCurrencyData({
-                //     status: "error",
-                // });
+                status = "error";
             }
         })();
     };

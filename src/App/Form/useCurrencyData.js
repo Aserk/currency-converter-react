@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export const useCurrencyData = () => {
     const [currencyData, setCurrencyData] = useState(
@@ -9,7 +10,7 @@ export const useCurrencyData = () => {
     );
 
     useEffect(() => {
-        const getData = (async () => {
+        (async () => {
             try {
                 const response = await fetch("https://api.exchangerate.host/latest");
                 if (!response.ok) {
@@ -28,8 +29,6 @@ export const useCurrencyData = () => {
                 });
             }
         })();
-
-        // setTimeout(getData, 3000);
     }, []);
 
     return currencyData;
