@@ -10,25 +10,27 @@ export const useCurrencyData = () => {
     );
 
     useEffect(() => {
-        (async () => {
-            try {
-                const response = await fetch("https://api.exchangerate.host/latest");
-                if (!response.ok) {
-                    throw new Error(response.statusText);
+        setTimeout(() => {
+            (async () => {
+                try {
+                    const response = await fetch("https://api.exchangerate.host/latest");
+                    if (!response.ok) {
+                        throw new Error(response.statusText);
+                    }
+                    const { date, rates } = await response.json();
+                    setCurrencyData({
+                        date,
+                        currencies: Object.keys(rates),
+                        status: "success"
+                    });
+                } catch (error) {
+                    console.error("Something bad happened!", error);
+                    setCurrencyData({
+                        status: "error",
+                    });
                 }
-                const { date, rates } = await response.json();
-                setCurrencyData({
-                    date,
-                    currencies: Object.keys(rates),
-                    status: "success"
-                });
-            } catch (error) {
-                console.error("Something bad happened!", error);
-                setCurrencyData({
-                    status: "error",
-                });
-            }
-        })();
+            })();
+        }, 2000); 
     }, []);
 
     return currencyData;
