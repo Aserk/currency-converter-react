@@ -7,15 +7,15 @@
 https://aserk.github.io/currency-converter-react/
 
 ## Description
-This is simple currency converter build in React.
+This is simple currency converter build in React. Currencies are fetched from api.
 
 ## Technologies
 To create the page I used:
 1. HTML
 2. CSS
 3. Styled Components
-3. JavaScript
-4. React
+4. JavaScript
+5. React
 
 # Getting Started with Create React App
 
