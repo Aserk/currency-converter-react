@@ -17,9 +17,8 @@ export const useCurrencyData = () => {
                     if (!response.ok) {
                         throw new Error(response.statusText);
                     }
-                    const { date, rates } = await response.json();
+                    const { rates } = await response.json();
                     setCurrencyData({
-                        date,
                         currencies: Object.keys(rates),
                         status: "success"
                     });

@@ -1,15 +1,14 @@
 import { StyledForm, Fieldset, Legend, Button, Field, FieldText } from "./styled";
 import { useState } from "react";
 import { Result } from "./Result";
-import { Footer } from "./Footer";
 import { useCurrencyData } from "./useCurrencyData";
 import { useCalculateResult } from "./useCalculateResult";
 import { Loading } from "./Loading";
 import { Error } from "./Error";
 
 const Form = () => {
-  const { date, currencies, status } = useCurrencyData();
-  const { calculateResult, result } = useCalculateResult();
+  const { currencies, status } = useCurrencyData();
+  const { calculateResult, resultDate } = useCalculateResult();
 
   const [amount, setAmount] = useState("");
   const [currencyBase, setCurrencyBase] = useState("PLN");
@@ -17,7 +16,7 @@ const Form = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult(currencyBase, currencyTarget, amount, status, date);
+    calculateResult(currencyBase, currencyTarget, amount);
   };
 
   return (
@@ -85,9 +84,8 @@ const Form = () => {
                 </label>
               </p>
               <Button>Przelicz</Button>
-              <Result result={result} />
+              <Result resultDate={resultDate} />
             </Fieldset>
-            <Footer date={date} />
           </>
       }
     </StyledForm>
