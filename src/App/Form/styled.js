@@ -10,6 +10,11 @@ export const Fieldset = styled.fieldset`
     border: 2px solid ${({ theme }) => theme.color.jewel};
     padding: 20px;
     border-radius: 8px;
+    min-height: 378px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        min-height: 465px;
+    }
 `;
 
 export const Legend = styled.legend`
