@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
 `;
 
 export const Fieldset = styled.fieldset`
-    border: 2px solid ${({ theme }) => theme.color.jewel};
+    border: none;
     padding: 20px;
     border-radius: 8px;
     min-height: 378px;

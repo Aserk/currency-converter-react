@@ -18,7 +18,11 @@ export const GlobalStyled = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url("${background}");
+        background-image: linear-gradient(
+            to bottom,
+            ${({ theme }) => theme.color.outerSpace},
+            ${({ theme }) => theme.color.outerSpace}
+          ), url("${background}");
         background-attachment: fixed;
         background-position: center center;
         background-size: contain;
