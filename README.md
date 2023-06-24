@@ -1,7 +1,7 @@
 # Currency-converter
 
 ## Page Preview
-![Page Gif](/public/CurrencyConverter.gif)
+![Page Gif](/src/assets/CurrencyConverter.gif)
 
 ## Demo
 https://aserk.github.io/currency-converter-react/

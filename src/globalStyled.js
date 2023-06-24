@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import background from "./calculator.jpg"
+import background from "./assets/calculator.jpg"
 
 export const GlobalStyled = createGlobalStyle`
     html {
