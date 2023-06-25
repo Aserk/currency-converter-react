@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import background from "./assets/calculator.jpg"
+import background from "./assets/currency.jpg"
 
 export const GlobalStyled = createGlobalStyle`
     html {
@@ -18,14 +18,7 @@ export const GlobalStyled = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: linear-gradient(
-            to bottom,
-            ${({ theme }) => theme.color.outerSpace},
-            ${({ theme }) => theme.color.outerSpace}
-          ), url("${background}");
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-image: url("${background}");
+        background-size: cover;
     }
 `;
