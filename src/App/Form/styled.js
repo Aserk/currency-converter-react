@@ -18,11 +18,7 @@ export const Fieldset = styled.fieldset`
 `;
 
 export const Legend = styled.legend`
-    width: 100%;
-    max-width: 360px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.color.jewel};
+    font-size: 24px;
 `;
 
 export const Button = styled.button`

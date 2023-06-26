@@ -7,7 +7,9 @@ export const Container = styled.div`
     margin: auto 20px;
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.outerSpace};
-    border-radius: 32px;
-    box-shadow: 0 0 16px ${({ theme }) => theme.color.outerSpace};
+    border-radius: 16px;
+    box-shadow: 0 4px 30px ${({ theme }) => theme.color.outerSpace};
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     display: grid;
 `;
