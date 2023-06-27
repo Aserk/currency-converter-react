@@ -3,17 +3,18 @@ import styled from "styled-components";
 export const StyledForm = styled.form`
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding-top: 20px;
 `;
 
 export const Fieldset = styled.fieldset`
     border: none;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     border-radius: 8px;
-    min-height: 378px;
+    min-height: 326px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        min-height: 465px;
+        min-height: 380px;
     }
 `;
 
@@ -23,7 +24,7 @@ export const Legend = styled.legend`
 
 export const Button = styled.button`
     width: 100%;
-    max-width: 360px;
+    max-width: 405px;
     border-radius: 8px;
     border: none;
     padding: 10px;
@@ -48,7 +49,8 @@ export const Field = styled.input`
 
 export const FieldText = styled.span`
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
     display: inline-block;
     margin-right: 5px;
+    text-align: left;
 `;
