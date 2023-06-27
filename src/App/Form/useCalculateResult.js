@@ -16,7 +16,9 @@ export const useCalculateResult = () => {
         setTimeout(() => {
             (async () => {
                 try {
-                    const response = await fetch(requestURL);
+                    const response = await fetch(requestURL, {
+                        cache: "no-cache",
+                    });
                     if (!response.ok) {
                         throw new Error(response.statusText);
                     }
