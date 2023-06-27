@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     flex-basis: 800px;
-    min-height: 401px;
+    min-height: 427px;
     padding: 20px;
     margin: auto 20px;
     color: ${({ theme }) => theme.color.white};
@@ -14,6 +14,6 @@ export const Container = styled.div`
     display: grid;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        min-height: 470px;
+        min-height: 520px;
     }
 `;

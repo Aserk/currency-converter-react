@@ -40,7 +40,7 @@ export const useCalculateResult = () => {
                     );
                 }
             })();
-        }, 1000)
+        }, [])
     };
 
     return { calculateResult, resultDate };

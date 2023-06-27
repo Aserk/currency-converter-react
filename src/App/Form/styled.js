@@ -11,10 +11,10 @@ export const Fieldset = styled.fieldset`
     padding: 0;
     margin: 0;
     border-radius: 8px;
-    min-height: 326px;
+    min-height: 353px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        min-height: 380px;
+        min-height: 428px;
     }
 `;
 
